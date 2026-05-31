@@ -28,7 +28,7 @@ export async function apiFetch<T = any>(
     if (res.status === 401 && typeof window !== 'undefined') {
         localStorage.removeItem('token')
         localStorage.removeItem('user')
-        window.location.href = '/cueva-de-reparacion/login'
+        window.location.href = '/LaForja/login'
         return { data: null as T, ok: false, status: 401 }
     }
 
